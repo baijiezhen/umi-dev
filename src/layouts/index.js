@@ -1,12 +1,8 @@
-import styles from './index.css';
-
+import styles from '../assets/css/style.scss';
+// import styles from './index.css';
+console.log(styles);
 function BasicLayout(props) {
-  return (
-    <div className={styles.normal}>
-      <h1 className={styles.title}>Yay! Welcome to umi!</h1>
-      {props.children}
-    </div>
-  );
+  return <div className={styles.app}>{props.children}</div>;
 }
 
 export default BasicLayout;

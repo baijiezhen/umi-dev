@@ -4,3 +4,6 @@
     
  ## URL跳转
 ### umi生成动态的路由，前提是不进行配置
+### umi中使用sass 
+### 修改了配置文件，一定要重启服务
+ umi中使用sass  npm install --save @umijs/plugin-sass  npm i --save-dev node-sass sass-loader

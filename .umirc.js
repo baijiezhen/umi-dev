@@ -31,5 +31,13 @@ export default {
       },
     ],
   ],
+  proxy: {
+    '/api': {
+      target: 'http://gy.jvlihd.com/home/main/',
+      changeOrigin: true,
+      pathRewrite: { '^/api': '' },
+    },
+  },
   history: 'hash',
+  sass: {}, ///配这里
 };
