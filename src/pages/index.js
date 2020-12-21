@@ -10,6 +10,9 @@ export default function() {
       <div type="default" value="large">
         <Link to={`/products/2`}>法人理财</Link>
       </div>
+      <div>
+        <Link to={`/hooks`}>hooks简介</Link>
+      </div>
     </div>
   );
 }
