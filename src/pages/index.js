@@ -13,6 +13,9 @@ export default function() {
       <div>
         <Link to={`/hooks`}>hooks简介</Link>
       </div>
+      <div>
+        <Link to={`/smzq`}>react生命周期简介-class组件中的父子通信</Link>
+      </div>
     </div>
   );
 }
