@@ -37,6 +37,10 @@ export default function() {
         <li>
           <Link to={`/hooks/hooks11`}>自定义hook简单使用</Link>
         </li>
+        <li>
+          <Link to={`/hooks/xysy`}>常用方法简单使用</Link>
+        </li>
+        <li><Link to={`/hooks/useM_h`}>常用方法简单使用</Link></li>
       </ul>
     </>
   );
