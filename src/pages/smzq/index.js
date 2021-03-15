@@ -9,6 +9,9 @@ class Welcome extends React.Component {
     };
   }
   ChildPage = '';
+  componentWillMount() {
+    console.log('组件将要加载');
+  }
   componentDidMount() {
     console.log('组件初始化'); // 一般请求接口
   }
@@ -20,14 +23,14 @@ class Welcome extends React.Component {
   }
   fn() {
     if (this.ChildPage) {
-      console.log(this.ChildPage.state.countC);
+      //   console.log(this.ChildPage.state.countC);
       this.ChildPage.addCount(); //调用子组件的dream方法
     }
   }
   onRefChild = ref => {
-    console.log(ref);
+    // console.log(ref);
     this.ChildPage = ref;
-    console.log(this.ChildPage);
+    // console.log(this.ChildPage);
   };
   render() {
     return (

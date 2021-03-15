@@ -6,7 +6,7 @@ export default function UseRefDom2() {
   const numRef = useRef(count);
   useEffect(() => {
     console.log(count);
-    numRef.current = count;
+    // numRef.current = count;
   }, [count]);
   return (
     <div>

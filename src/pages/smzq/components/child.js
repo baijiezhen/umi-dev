@@ -2,27 +2,30 @@ import React from 'react';
 class Child extends React.Component {
   constructor(props) {
     super(props);
+    this.addCount = this.addCount.bind(this);
     this.state = {
       //声明变量
       countC: 1,
     };
     if (props.onRef) {
       //如果父组件传来该方法 则调用方法将子组件this指针传过去
-      console.log(2222222);
+      //   console.log(2222222);
       props.onRef(this);
     }
   }
-
+  componentWillMount() {
+    console.log('组件将要加载,我是child组件');
+  }
   componentDidMount() {
-    console.log('组件初始化');
-    console.log(this.props);
+    console.log('组件初始化，我是child组件');
+    // console.log(this.props);
   }
   componentWillUnmount() {
-    console.log('组件卸载了');
+    console.log('组件卸载了，我是child组件');
   }
   componentDidUpdate(prevProps, prevState) {
     console.log(prevProps, prevState);
-    console.log('组件更新了');
+    console.log('组件更新了，我是child组件');
   }
   componentWillReceiveProps(nextProps) {
     //     nextProps.openNotice !== this.props.openNotice&&this.setState({
@@ -31,7 +34,7 @@ class Child extends React.Component {
     //       console.log(this.state.openNotice:nextProps)
     //       //将state更新为nextProps,在setState的第二个参数（回调）可以打         印出新的state
     //   })
-    console.log(nextProps);
+    console.log(nextProps, '    我是child组件');
   }
   shouldComponentUpdate(nextProps, nextState) {
     console.log(nextProps, nextState);

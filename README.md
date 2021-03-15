@@ -1,3 +1,4 @@
+### 项目中用到的umi为文档V2.X.X版本
 ### 项目参考文档地址：https://www.wenjiangs.com/doc/umijs-api-api
 ### 路由的两种使用方式
  ## 动态路由

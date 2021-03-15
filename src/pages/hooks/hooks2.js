@@ -1,25 +1,23 @@
 import React, { useContext, useState } from 'react';
 import ComponentB from './components/ComponentB';
 import TextContext from '../../utils/com';
-console.log(TextContext);
+// console.log(TextContext);
 const UseContext = () => {
   //   const TextContext = React.createContext();
   const ComponentA = () => {
     const [text, setText] = React.useContext(TextContext);
     return (
       <>
-        <button onClick={() => setText('Hello Component A')}>改变text的值</button>
+        <button onClick={() => setText('Hello Component A')}>改变text的值 ----{text}</button>
         <ComponentB></ComponentB>
       </>
     );
   };
-  //   const ComponentB = () => {
-  //     const [text, setText] = React.useContext(TextContext);
-  //     return <div>{text}</div>;
-  //   };
+
   return (
     <TextContext.Provider value={useState('Hello World.')}>
       <ComponentA />
+     
     </TextContext.Provider>
   );
 };

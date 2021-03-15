@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-export default function() {
+const Hooks1 = function() {
   let [count, setCount] = useState(0);
+  let [m, setM] = useState(0);
   useEffect(() => {
     let timeId = setInterval(() => {
       setCount(count + 1);
@@ -13,4 +14,6 @@ export default function() {
       <div>打印count值----------{count}</div>
     </>
   );
-}
+};
+// console.dir(Hooks1);
+export default Hooks1;

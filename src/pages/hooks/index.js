@@ -40,7 +40,12 @@ export default function() {
         <li>
           <Link to={`/hooks/xysy`}>常用方法简单使用</Link>
         </li>
-        <li><Link to={`/hooks/useM_h`}>常用方法简单使用</Link></li>
+        <li>
+          <Link to={`/hooks/useM_h`}>常用方法简单使用</Link>
+        </li>
+        <li>
+          <Link to={`/hooks/mome`}>memo简介</Link>
+        </li>
       </ul>
     </>
   );

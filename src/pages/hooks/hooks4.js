@@ -28,7 +28,7 @@ function UseCallback() {
     <>
       <PageA onClick={handleClick1}>{a}</PageA>
       {/* <PageB onClick={handleClick2} name={b} /> */}
-      <PageC onClick={handleClick2} name={b}></PageC>
+      {/* <PageC onClick={handleClick2} name={b}></PageC> */}
     </>
   );
 }
@@ -36,5 +36,6 @@ function UseCallback() {
 // 点击事件handleClick1触发时，PageB组件也会重新渲染，当PageB组件比较耗时时，就会造成新能问题
 // PageB组件重新渲染的原因在于每次重新渲染，onClick都会重新定义，即上次的与这次的不一致
 // 思路：通过useCallback包裹onClick来达到缓存的效果，即useCallback的依赖项不变时不重新生成
-// 用过memo方法包裹PageB组件，并且通过useCallback包裹PageB组件的onClick方法，memo与PureComponent比较类似，前者是对Function Component的优化，后者是对Class Component的优化，都会对传入组件的数据进行浅比较，useCallback则会保证handleClick2不会发生变化
+// 用过memo方法包裹PageB组件，并且通过useCallback包裹PageB组件的onClick方法，memo与PureComponent比较类似，
+// 前者是对Function Component的优化，后者是对Class Component的优化，都会对传入组件的数据进行浅比较，useCallback则会保证handleClick2不会发生变化
 export default UseCallback;
